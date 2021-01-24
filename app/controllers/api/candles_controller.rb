@@ -9,4 +9,15 @@ class Api::CandlesController < ApplicationController
     render 'show.json.jb'
   end
 
+  def create
+    @candle = Candle.new(
+      name: params[:name],
+      price: params[:price],
+      description: params[:description],
+      image_url: params[:image_url]
+    )
+    @candle.save
+    render 'show.json.jb'
+  end
+
 end
