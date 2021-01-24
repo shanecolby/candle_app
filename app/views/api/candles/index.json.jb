@@ -1,0 +1,15 @@
+@candles.map do |candle|
+  {
+
+    id: candle.id,
+    name: candle.name,
+    price: candle.price,
+    description: candle.description,
+    image_url: candle.image_url
+
+
+
+
+
+  }
+end
