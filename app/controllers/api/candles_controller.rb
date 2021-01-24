@@ -20,4 +20,15 @@ class Api::CandlesController < ApplicationController
     render 'show.json.jb'
   end
 
+  def update
+    @candle = Candle.find_by(id: params[:id])
+
+    @candle.name = params[:name] || @candle.name
+    @candle.price = params[:price] || @candle.price
+    @candle.description = params[:description] || @candle.description
+    @candle.image_url  = params[:image_url] || @candle.image_url
+    @candle.save
+    render 'show.json.jb'
+  end
+
 end

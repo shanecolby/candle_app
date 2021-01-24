@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get "/candles" => "candles#index"
     get '/candles/:id' => 'candles#show'
     post '/candles' => 'candles#create'
+    patch '/candles/:id' => 'candles#update'
+    delete '/candles/:id' => 'candles#destroy'
 
   end
 end
