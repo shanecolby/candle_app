@@ -34,7 +34,7 @@ class Api::CandlesController < ApplicationController
   def destroy
     @candle = Candle.find_by(id: params[:id])
     @candle.destroy
-    render json: {message: "candle has been deleted "}
+    render json: {message: "candle has been reomved"}
   end
 
 end
